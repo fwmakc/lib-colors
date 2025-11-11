@@ -19,9 +19,11 @@ yarn add lib-colors
 Можно импортировать методы как с отдельные функции:
 
 ```
-import { color } from 'lib-colors';
+import { rgb, cmyk } from 'lib-colors';
 
-const rgb = color(0,127,255,1);
+const backgroundColor = rgb(0, 127, 255, 1).hex();
+const cmykFromRgb = rgb(127, 127, 255).cmyk();
+const rgbFromCmyk = cmyk(0, 100, 100, 0).rgb();
 ```
 
 # Список методов
