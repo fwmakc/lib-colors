@@ -21,7 +21,16 @@ yarn add lib-colors
 ```
 import { rgb, cmyk } from 'lib-colors';
 
-const backgroundColor = rgb(0, 127, 255, 1).hex();
+const color = rgb(0, 127, 255, 1).hex();
+
+const colorFromHex = hex('#000000');
+const colorFromHsl = hsl(120, 100, 50);
+const colorFromRgb = rgb(0, 0, 0);
+
+const hexColor = color.hex();
+const hslColor = color.hsl();
+const rgbColor = color.rgb();
+
 const cmykFromRgb = rgb(127, 127, 255).cmyk();
 const rgbFromCmyk = cmyk(0, 100, 100, 0).rgb();
 ```
