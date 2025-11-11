@@ -1,3 +1,5 @@
+import { ICMYK } from './color.interface';
+import { toCMYK } from './helpers/to_cmyk';
 import { toHex } from './helpers/to_hex';
 import { toHSL } from './helpers/to_hsl';
 import { toRGB } from './helpers/to_rgb';
@@ -13,6 +15,10 @@ export class Color {
     this.g = g;
     this.b = b;
     this.a = a;
+  }
+
+  cmyk(): ICMYK {
+    return toCMYK(this.r, this.g, this.b, this.a);
   }
 
   hex(): string {
