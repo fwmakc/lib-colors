@@ -1,15 +1,21 @@
-import { emptyArray } from './helpers/empty_array.helper';
-import { emptyObject } from './helpers/empty_object.helper';
-import { isEmpty } from './helpers/is_empty.helper';
-import { notEmpty } from './helpers/not_empty.helper';
-import { notEmptyArray } from './helpers/not_empty_array.helper';
-import { notEmptyObject } from './helpers/not_empty_object.helper';
+import { Color } from './color.class';
+import { fromHex } from './helpers/from_hex';
+import { fromHSL } from './helpers/from_hsl';
+import { fromRGB } from './helpers/from_rgb';
 
-export {
-  emptyArray,
-  emptyObject,
-  isEmpty,
-  notEmptyArray,
-  notEmptyObject,
-  notEmpty,
+export { Color };
+
+export const rgb = (r: number, g: number, b: number, a?: number) => {
+  ({ r, g, b, a } = fromRGB(r, g, b, a));
+  return new Color(r, g, b, a);
+};
+
+export const hex = (hex: string) => {
+  const { r, g, b, a } = fromHex(hex);
+  return new Color(r, g, b, a);
+};
+
+export const hsl = (h: number, s: number, l: number) => {
+  const { r, g, b, a } = fromHSL(h, s, l);
+  return new Color(r, g, b, a);
 };

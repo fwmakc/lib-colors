@@ -1,4 +1,4 @@
-import { color } from './color';
+import { rgb } from '..';
 
 const testCases = [
   { r: 0, g: 0, b: 0, a: 0 },
@@ -86,8 +86,8 @@ const testCases = [
 
 describe('notEmpty', () => {
   testCases.forEach(({ r, b, g, a }) => {
-    const result = color(r, g, b, a);
-    it(`${r},${g},${b},${a} -> ${result.r},${result.g},${result.b},${result.a}`, () => {
+    const result = rgb(r, g, b, a);
+    it(`${r},${g},${b},${a} -> ${result.rgb()} -> ${result.hex()}`, () => {
       expect(true).toBeTruthy();
     });
   });
