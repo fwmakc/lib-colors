@@ -1,12 +1,6 @@
 import { IColor } from '../color.interface';
 
-export function fromCMYK(
-  c: number,
-  m: number,
-  y: number,
-  k: number,
-  a?: number,
-): IColor {
+export function fromCMYK(c: number, m: number, y: number, k: number, a?: number): IColor {
   c = c / 100;
   m = m / 100;
   y = y / 100;

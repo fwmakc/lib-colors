@@ -6,12 +6,7 @@ import { fromRGB } from './helpers/from_rgb';
 
 export { Color };
 
-export const rgb = (
-  red: number,
-  green: number,
-  blue: number,
-  alpha?: number,
-) => {
+export const rgb = (red: number, green: number, blue: number, alpha?: number) => {
   const { r, g, b, a } = fromRGB(red, green, blue, alpha);
   return new Color(r, g, b, a);
 };
@@ -26,13 +21,7 @@ export const hsl = (h: number, s: number, l: number, alpha?: number) => {
   return new Color(r, g, b, a);
 };
 
-export const cmyk = (
-  c: number,
-  m: number,
-  y: number,
-  k: number,
-  alpha?: number,
-) => {
+export const cmyk = (c: number, m: number, y: number, k: number, alpha?: number) => {
   const { r, g, b, a } = fromCMYK(c, m, y, k, alpha);
   return new Color(r, g, b, a);
 };

@@ -1,18 +1,13 @@
 {
-  "arrowParents": "avoid",
-  "endOfLine": "auto",
-  "importOrder": [
-    "<THIRD_PARTY_MODULES>",
-    "/routes/",
-    "/middleware/",
-    "^../(.*)",
-    "^./(.*)"
-  ],
-  "importOrderSeparator": true,
-  "importOrderSortSpecifiers": true,
   "semi": true,
+  "trailingComma": "es5",
   "singleQuote": true,
+  "printWidth": 100,
   "tabWidth": 2,
-  "trailingComma": "all",
-  "useTabs": false
+  "useTabs": false,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "quoteProps": "as-needed",
+  "proseWrap": "never"
 }

@@ -2,7 +2,7 @@ export interface IColor {
   r: number;
   g: number;
   b: number;
-  a?: number;
+  a?: number | undefined;
 }
 
 export interface ICMYK {
@@ -10,5 +10,5 @@ export interface ICMYK {
   m: number;
   y: number;
   k: number;
-  a?: number;
+  a?: number | undefined;
 }
