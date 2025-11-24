@@ -4,7 +4,12 @@ import { testCases } from './rgb.case';
 describe('test rgb to...', () => {
   testCases.forEach(({ value, expect: expected }) => {
     const { r, b, g, a } = value;
-    const { rgb: rgbExpect, hex: hexExpect, hsl: hslExpect, cmyk: cmykExpect } = expected;
+    const {
+      rgb: rgbExpect,
+      hex: hexExpect,
+      hsl: hslExpect,
+      cmyk: cmykExpect,
+    } = expected;
     const result = rgb(r, g, b, a);
 
     it(`rgb: ${r},${g},${b},${a} -> ${result.rgb()}`, () => {

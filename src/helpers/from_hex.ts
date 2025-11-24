@@ -1,4 +1,4 @@
-import { IRGB } from '../interfaces/rgb.interface';
+import type { IRGB } from '../interfaces/rgb.interface';
 
 export function fromHex(hex: string): IRGB {
   hex = hex.replace(/^#/, '');

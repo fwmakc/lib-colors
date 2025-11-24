@@ -1,6 +1,12 @@
-import { IRGB } from '../interfaces/rgb.interface';
+import type { IRGB } from '../interfaces/rgb.interface';
 
-export function fromCMYK(c: number, m: number, y: number, k: number, a?: number): IRGB {
+export function fromCMYK(
+  c: number,
+  m: number,
+  y: number,
+  k: number,
+  a?: number,
+): IRGB {
   c = c / 100;
   m = m / 100;
   y = y / 100;

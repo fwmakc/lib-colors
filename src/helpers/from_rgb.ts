@@ -1,4 +1,5 @@
-import { IRGB } from '../interfaces/rgb.interface';
+import type { IRGB } from '../interfaces/rgb.interface';
+
 import { alphaIsSet } from './alpha_is_set';
 
 export function fromRGB(r: number, g: number, b: number, a?: number): IRGB {

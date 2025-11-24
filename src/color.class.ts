@@ -1,8 +1,8 @@
-import { ICMYK } from './interfaces/cmyk.interface';
 import { toCMYK } from './helpers/to_cmyk';
 import { toHex } from './helpers/to_hex';
 import { toHSL } from './helpers/to_hsl';
 import { toRGB } from './helpers/to_rgb';
+import type { ICMYK } from './interfaces/cmyk.interface';
 
 export class Color {
   r = 0;

@@ -1,4 +1,4 @@
-import { IRGB } from '../interfaces/rgb.interface';
+import type { IRGB } from '../interfaces/rgb.interface';
 
 export function fromHSL(h: number, s: number, l: number, a?: number): IRGB {
   let r: number, g: number, b: number;
@@ -6,7 +6,7 @@ export function fromHSL(h: number, s: number, l: number, a?: number): IRGB {
   if (s === 0) {
     r = g = b = l;
   } else {
-    const hue2rgb = (p: number, q: number, t: number) => {
+    const hue2rgb = (p: number, q: number, t: number): number => {
       if (t < 0) t += 1;
       if (t > 1) t -= 1;
       if (t < 1 / 6) return p + (q - p) * 6 * t;
