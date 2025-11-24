@@ -1,4 +1,4 @@
-import type { ICMYK } from '../interfaces/cmyk.interface';
+import type { ICMYK } from '../../interfaces/cmyk.interface';
 
 export function toCMYK(r: number, g: number, b: number, a?: number): ICMYK {
   r /= 255;

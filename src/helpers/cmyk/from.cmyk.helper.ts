@@ -1,4 +1,4 @@
-import type { IRGB } from '../interfaces/rgb.interface';
+import type { IRGB } from '../../interfaces/rgb.interface';
 
 export function fromCMYK(
   c: number,

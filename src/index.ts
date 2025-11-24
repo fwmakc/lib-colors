@@ -1,8 +1,8 @@
 import { Color } from './color.class';
-import { fromCMYK } from './helpers/from_cmyk';
-import { fromHex } from './helpers/from_hex';
-import { fromHSL } from './helpers/from_hsl';
-import { fromRGB } from './helpers/from_rgb';
+import { fromCMYK } from './helpers/cmyk/from.cmyk.helper';
+import { fromHex } from './helpers/hex/from.hex.helper';
+import { fromHSL } from './helpers/hsl/from.hsl.helper';
+import { fromRGB } from './helpers/rgb/from.rgb.helper';
 
 export { Color };
 

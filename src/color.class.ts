@@ -1,8 +1,11 @@
-import { toCMYK } from './helpers/to_cmyk';
-import { toHex } from './helpers/to_hex';
-import { toHSL } from './helpers/to_hsl';
-import { toRGB } from './helpers/to_rgb';
+import { constCMYK } from './helpers/cmyk/const.cmyk.helper';
+import { constHex } from './helpers/hex/const.hex.helper';
+import { constHSL } from './helpers/hsl/const.hsl.helper';
+import { constRGB } from './helpers/rgb/const.rgb.helper';
 import type { ICMYK } from './interfaces/cmyk.interface';
+import type { IHEX } from './interfaces/hex.interface';
+import type { IHSL } from './interfaces/hsl.interface';
+import type { IRGB } from './interfaces/rgb.interface';
 
 export class Color {
   r = 0;
@@ -18,18 +21,18 @@ export class Color {
   }
 
   cmyk(): ICMYK {
-    return toCMYK(this.r, this.g, this.b, this.a);
+    return constCMYK(this.r, this.g, this.b, this.a);
   }
 
-  hex(): string {
-    return toHex(this.r, this.g, this.b, this.a);
+  hex(): IHEX {
+    return constHex(this.r, this.g, this.b, this.a);
   }
 
-  hsl(): string {
-    return toHSL(this.r, this.g, this.b, this.a);
+  hsl(): IHSL {
+    return constHSL(this.r, this.g, this.b, this.a);
   }
 
-  rgb(): string {
-    return toRGB(this.r, this.g, this.b, this.a);
+  rgb(): IRGB {
+    return constRGB(this.r, this.g, this.b, this.a);
   }
 }

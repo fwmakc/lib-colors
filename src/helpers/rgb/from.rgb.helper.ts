@@ -1,6 +1,5 @@
-import type { IRGB } from '../interfaces/rgb.interface';
-
-import { alphaIsSet } from './alpha_is_set';
+import type { IRGB } from '../../interfaces/rgb.interface';
+import { alphaIsSet } from '../alpha_is_set.helper';
 
 export function fromRGB(r: number, g: number, b: number, a?: number): IRGB {
   const clamp = (value: number, min: number, max: number): number =>

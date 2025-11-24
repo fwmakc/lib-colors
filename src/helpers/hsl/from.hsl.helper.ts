@@ -1,4 +1,4 @@
-import type { IRGB } from '../interfaces/rgb.interface';
+import type { IRGB } from '../../interfaces/rgb.interface';
 
 export function fromHSL(h: number, s: number, l: number, a?: number): IRGB {
   let r: number, g: number, b: number;

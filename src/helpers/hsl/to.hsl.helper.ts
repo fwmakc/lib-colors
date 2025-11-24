@@ -1,6 +1,6 @@
-import { alphaIsSet } from './alpha_is_set';
+import type { IHSL } from '../../interfaces/hsl.interface';
 
-export function toHSL(r: number, g: number, b: number, a?: number): string {
+export function toHSL(r: number, g: number, b: number, a?: number): IHSL {
   r = r / 255;
   g = g / 255;
   b = b / 255;
@@ -36,7 +36,11 @@ export function toHSL(r: number, g: number, b: number, a?: number): string {
   const hValue = Math.round(h * 360);
   const sValue = Math.round(s * 100);
   const lValue = Math.round(l * 100);
-  const aValue = alphaIsSet(a) ? ` / ${a}` : '';
 
-  return `hsl(${hValue}, ${sValue}%, ${lValue}%${aValue})`;
+  return {
+    h: hValue,
+    s: sValue,
+    l: lValue,
+    a,
+  };
 }
