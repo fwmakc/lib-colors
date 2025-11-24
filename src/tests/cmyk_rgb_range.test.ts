@@ -6,8 +6,8 @@ describe('test cmyk to rgb range', () => {
     const { c, m, y, k } = value;
     const result = cmyk(c, m, y, k);
 
-    it(`${c},${m},${y},${k} -> ${result.rgb()}`, () => {
-      expect(result.rgb()).toBe(expected);
+    it(`${c},${m},${y},${k} -> ${result.rgb().string}`, () => {
+      expect(result.rgb().string).toBe(expected);
     });
   });
 });

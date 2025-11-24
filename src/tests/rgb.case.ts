@@ -5,7 +5,7 @@ export const testCases = [
       rgb: 'rgba(0,0,0,0)',
       hex: '#000000ff',
       hsl: 'hsl(0, 0%, 0% / 0)',
-      cmyk: { c: 0, m: 0, y: 0, k: 100, a: 0 },
+      cmyk: '0 0 0 100 0',
     },
   },
   {
@@ -14,7 +14,7 @@ export const testCases = [
       rgb: 'rgba(0,0,0,0.5)',
       hex: '#0000007f',
       hsl: 'hsl(0, 0%, 0% / 0.5)',
-      cmyk: { c: 0, m: 0, y: 0, k: 100, a: 0.5 },
+      cmyk: '0 0 0 100 0.5',
     },
   },
   {
@@ -23,7 +23,7 @@ export const testCases = [
       rgb: 'rgb(255,255,255)',
       hex: '#ffffff',
       hsl: 'hsl(0, 0%, 100%)',
-      cmyk: { c: 0, m: 0, y: 0, k: 0 },
+      cmyk: '0 0 0 0',
     },
   },
   {
@@ -32,7 +32,7 @@ export const testCases = [
       rgb: 'rgb(0,0,0)',
       hex: '#000000',
       hsl: 'hsl(0, 0%, 0%)',
-      cmyk: { c: 0, m: 0, y: 0, k: 100 },
+      cmyk: '0 0 0 100',
     },
   },
   {
@@ -41,7 +41,7 @@ export const testCases = [
       rgb: 'rgb(100,100,100)',
       hex: '#646464',
       hsl: 'hsl(0, 0%, 39%)',
-      cmyk: { c: 0, m: 0, y: 0, k: 61 },
+      cmyk: '0 0 0 61',
     },
   },
   {
@@ -50,7 +50,7 @@ export const testCases = [
       rgb: 'rgb(255,255,255)',
       hex: '#ffffff',
       hsl: 'hsl(0, 0%, 100%)',
-      cmyk: { c: 0, m: 0, y: 0, k: 0 },
+      cmyk: '0 0 0 0',
     },
   },
   {
@@ -59,7 +59,7 @@ export const testCases = [
       rgb: 'rgb(0,0,0)',
       hex: '#000000',
       hsl: 'hsl(0, 0%, 0%)',
-      cmyk: { c: 0, m: 0, y: 0, k: 100 },
+      cmyk: '0 0 0 100',
     },
   },
 ];

@@ -10,7 +10,7 @@ export const constCMYK = (
   a?: number,
 ): ICMYK => {
   const object = toCMYK(r, g, b, a);
-  const string = (): string => stringCMYK(object);
+  const string = stringCMYK(object);
 
   return { ...object, string };
 };

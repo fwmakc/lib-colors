@@ -46,18 +46,20 @@ const hslColor = color.hsl();
 const rgbColor = color.rgb();
 ```
 
-> Метод класса вернет строку.
+> Метод класса вернет объект значений цветового представления
 
-Для примера преобразуем RGB в CMYK:
+> Чтобы получить строку, нужно вызвать у объекта свойство string
+
+Для примера преобразуем RGB в объект CMYK:
 
 ```
 const cmykFromRgb = rgb(127, 127, 255).cmyk();
 ```
 
-И наоборот:
+И преобразуем CMYK в строку RGB:
 
 ```
-const rgbFromCmyk = cmyk(0, 100, 100, 0).rgb();
+const rgbFromCmyk = cmyk(0, 100, 100, 0).rgb().string;
 ```
 
 # Разработка

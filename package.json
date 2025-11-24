@@ -1,6 +1,6 @@
 {
   "name": "lib-colors",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple node.js library for work with colors",
   "keywords": [
     "color",

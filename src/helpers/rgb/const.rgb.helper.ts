@@ -5,7 +5,7 @@ import { toRGB } from './to.rgb.helper';
 
 export const constRGB = (r: number, g: number, b: number, a?: number): IRGB => {
   const object = toRGB(r, g, b, a);
-  const string = (): string => stringRGB(object);
+  const string = stringRGB(object);
 
   return { ...object, string };
 };

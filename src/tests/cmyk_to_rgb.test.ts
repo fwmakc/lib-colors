@@ -6,8 +6,8 @@ describe('test cmyk to rgb', () => {
     const result = cmyk(c, m, y, k);
     const expected = `rgb(${r},${g},${b})`;
 
-    it(`${JSON.stringify({ c, m, y, k })} -> ${result.rgb()}`, () => {
-      expect(result.rgb()).toBe(expected);
+    it(`${JSON.stringify({ c, m, y, k })} -> ${result.rgb().string}`, () => {
+      expect(result.rgb().string).toBe(expected);
     });
   });
 });

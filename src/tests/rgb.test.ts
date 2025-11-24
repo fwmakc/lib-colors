@@ -12,20 +12,20 @@ describe('test rgb to...', () => {
     } = expected;
     const result = rgb(r, g, b, a);
 
-    it(`rgb: ${r},${g},${b},${a} -> ${result.rgb()}`, () => {
-      expect(result.rgb()).toBe(rgbExpect);
+    it(`rgb: ${r},${g},${b},${a} -> ${result.rgb().string}`, () => {
+      expect(result.rgb().string).toBe(rgbExpect);
     });
 
-    it(`hex: ${r},${g},${b},${a} -> ${result.hex()}`, () => {
-      expect(result.hex()).toBe(hexExpect);
+    it(`hex: ${r},${g},${b},${a} -> ${result.hex().string}`, () => {
+      expect(result.hex().string).toBe(hexExpect);
     });
 
-    it(`hsl: ${r},${g},${b},${a} -> ${result.hsl()}`, () => {
-      expect(result.hsl()).toBe(hslExpect);
+    it(`hsl: ${r},${g},${b},${a} -> ${result.hsl().string}`, () => {
+      expect(result.hsl().string).toBe(hslExpect);
     });
 
-    it(`cmyk: ${r},${g},${b},${a} -> ${JSON.stringify(result.cmyk())}`, () => {
-      expect(result.cmyk()).toEqual(cmykExpect);
+    it(`cmyk: ${r},${g},${b},${a} -> ${JSON.stringify(result.cmyk().string)}`, () => {
+      expect(result.cmyk().string).toEqual(cmykExpect);
     });
   });
 });
