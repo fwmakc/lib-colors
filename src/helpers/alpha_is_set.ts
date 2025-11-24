@@ -1,3 +1,4 @@
 export function alphaIsSet(a?: number): boolean {
-  return a !== undefined && a >= 0 && a < 1;
+  a = Number(a);
+  return a >= 0 && a < 1;
 }

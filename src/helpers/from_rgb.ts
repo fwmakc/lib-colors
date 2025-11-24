@@ -1,13 +1,14 @@
-import { IColor } from '../color.interface';
+import { IRGB } from '../interfaces/rgb.interface';
+import { alphaIsSet } from './alpha_is_set';
 
-export function fromRGB(r: number, g: number, b: number, a?: number): IColor {
+export function fromRGB(r: number, g: number, b: number, a?: number): IRGB {
   const clamp = (value: number, min: number, max: number): number =>
     Math.min(Math.max(value, min), max);
 
   r = clamp(r, 0, 255);
   g = clamp(g, 0, 255);
   b = clamp(b, 0, 255);
-  a = a ? clamp(a, 0, 1) : undefined;
+  a = alphaIsSet(a) ? clamp(Number(a), 0, 1) : undefined;
 
   return { r, g, b, a };
 }

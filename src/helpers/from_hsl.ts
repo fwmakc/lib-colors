@@ -1,6 +1,6 @@
-import { IColor } from '../color.interface';
+import { IRGB } from '../interfaces/rgb.interface';
 
-export function fromHSL(h: number, s: number, l: number, a?: number): IColor {
+export function fromHSL(h: number, s: number, l: number, a?: number): IRGB {
   let r: number, g: number, b: number;
 
   if (s === 0) {

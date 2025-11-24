@@ -1,6 +1,6 @@
-import { IColor } from '../color.interface';
+import { IRGB } from '../interfaces/rgb.interface';
 
-export function fromCMYK(c: number, m: number, y: number, k: number, a?: number): IColor {
+export function fromCMYK(c: number, m: number, y: number, k: number, a?: number): IRGB {
   c = c / 100;
   m = m / 100;
   y = y / 100;

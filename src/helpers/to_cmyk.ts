@@ -1,4 +1,4 @@
-import { ICMYK } from '../color.interface';
+import { ICMYK } from '../interfaces/cmyk.interface';
 
 export function toCMYK(r: number, g: number, b: number, a?: number): ICMYK {
   r /= 255;
@@ -8,7 +8,7 @@ export function toCMYK(r: number, g: number, b: number, a?: number): ICMYK {
   const k = 1 - Math.max(r, g, b);
 
   if (k === 1) {
-    return { c: 0, m: 0, y: 0, k: 100 };
+    return { c: 0, m: 0, y: 0, k: 100, a };
   }
 
   const c = (1 - r - k) / (1 - k);

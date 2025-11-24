@@ -1,4 +1,4 @@
-import { ICMYK } from './color.interface';
+import { ICMYK } from './interfaces/cmyk.interface';
 import { toCMYK } from './helpers/to_cmyk';
 import { toHex } from './helpers/to_hex';
 import { toHSL } from './helpers/to_hsl';

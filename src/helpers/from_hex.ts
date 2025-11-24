@@ -1,6 +1,6 @@
-import { IColor } from '../color.interface';
+import { IRGB } from '../interfaces/rgb.interface';
 
-export function fromHex(hex: string): IColor {
+export function fromHex(hex: string): IRGB {
   hex = hex.replace(/^#/, '');
 
   const r = parseInt(hex.substring(0, 2), 16);

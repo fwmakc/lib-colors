@@ -22,16 +22,41 @@ yarn add lib-colors
 import { rgb, cmyk } from 'lib-colors';
 
 const color = rgb(0, 127, 255, 1).hex();
+```
 
+Идея в том, чтобы сделать работу с цветом максимально простой.
+
+Чтобы создать класс **Color**, достаточно вызвать метод по названию цветового представления и передать нужные параметры.
+
+Например:
+
+```
 const colorFromHex = hex('#000000');
 const colorFromHsl = hsl(120, 100, 50);
 const colorFromRgb = rgb(0, 0, 0);
+```
 
+Чтобы вывести цвет в другом представлении, нужно из класса **Color** вызвать метод по его названию.
+
+Например:
+
+```
 const hexColor = color.hex();
 const hslColor = color.hsl();
 const rgbColor = color.rgb();
+```
 
+> Метод класса вернет строку.
+
+Для примера преобразуем RGB в CMYK:
+
+```
 const cmykFromRgb = rgb(127, 127, 255).cmyk();
+```
+
+И наоборот:
+
+```
 const rgbFromCmyk = cmyk(0, 100, 100, 0).rgb();
 ```
 
