@@ -1,9 +1,9 @@
-import type { IHEX } from '../../interfaces/hex.interface';
+import type { IHex } from '../../interfaces/hex.interface';
 
 import { stringHex } from './string.hex.helper';
 import { toHex } from './to.hex.helper';
 
-export const constHex = (r: number, g: number, b: number, a?: number): IHEX => {
+export const constHex = (r: number, g: number, b: number, a?: number): IHex => {
   const object = toHex(r, g, b, a);
   const string = stringHex(object);
 
