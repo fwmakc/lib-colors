@@ -8,7 +8,7 @@ export function rgbToLab(rgb: IRGB): ILAB {
 }
 
 function rgbToXyz(rgb: IRGB): IXYZ {
-  let { r, g, b, a } = rgb;
+  let { r, g, b, a } = { ...rgb };
 
   r /= 255;
   g /= 255;

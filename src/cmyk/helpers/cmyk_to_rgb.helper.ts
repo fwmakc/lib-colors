@@ -2,7 +2,7 @@ import type { IRGB } from '../../rgb/rgb.interface';
 import type { ICMYK } from '../cmyk.interface';
 
 export function cmykToRgb(cmyk: ICMYK): IRGB {
-  let { c, m, y, k, a } = cmyk;
+  let { c, m, y, k, a } = { ...cmyk };
 
   c /= 100;
   m /= 100;

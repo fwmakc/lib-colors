@@ -9,7 +9,7 @@ import { grayToRgb } from './helpers/gray_to_rgb.helper';
 import { grayToString } from './helpers/gray_to_string.helper';
 
 export class Gray {
-  private color: IGray = colorGray;
+  private color: IGray = { ...colorGray };
   readonly max: IGray = maxGray;
 
   get g(): number {

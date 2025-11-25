@@ -2,7 +2,7 @@ import type { IHSL } from '../../hsl/hsl.interface';
 import type { IRGB } from '../rgb.interface';
 
 export function rgbToHsl(rgb: IRGB): IHSL {
-  let { r, g, b, a } = rgb;
+  let { r, g, b, a } = { ...rgb };
 
   r /= 255;
   g /= 255;

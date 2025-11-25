@@ -9,7 +9,7 @@ export function labToCmyk(lab: ILAB): ICMYK {
 }
 
 function xyzToCmyk(xyz: IXYZ): ICMYK {
-  const { x, y, z, alpha } = xyz;
+  const { x, y, z, alpha } = { ...xyz };
 
   // Нормализуем XYZ
   const xNorm = Math.min(1, x / 95.047);

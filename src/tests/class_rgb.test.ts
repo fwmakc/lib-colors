@@ -1,5 +1,5 @@
 import { rgb } from '..';
-import { testCases } from './rgb.case';
+import { testCases } from './cases/rgb.case';
 
 describe('test rgb to...', () => {
   testCases.forEach(({ value, expect: expected }) => {

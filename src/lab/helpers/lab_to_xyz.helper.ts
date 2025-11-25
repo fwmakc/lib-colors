@@ -1,7 +1,7 @@
 import type { ILAB, IXYZ } from '../lab.interface';
 
 export function labToXyz(lab: ILAB): IXYZ {
-  const { l, a, b, alpha } = lab;
+  const { l, a, b, alpha } = { ...lab };
 
   const refX = 95.047;
   const refY = 100.0;

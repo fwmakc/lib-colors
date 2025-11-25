@@ -1,5 +1,5 @@
 import { cmyk } from '..';
-import { testCases } from './cmyk_rgb.case';
+import { testCases } from './cases/cmyk_rgb.case';
 
 describe('test cmyk to rgb', () => {
   testCases.forEach(({ c, m, y, k, r, g, b }) => {

@@ -16,7 +16,7 @@ const baseReflectance = {
 };
 
 function cmykToXyz(cmyk: ICMYK): IXYZ {
-  let { c, m, y, k, a } = cmyk;
+  let { c, m, y, k, a } = { ...cmyk };
 
   c /= 100;
   m /= 100;

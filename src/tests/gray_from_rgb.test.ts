@@ -1,5 +1,5 @@
 import { rgb } from '..';
-import { testCases } from './gray_rgb.case';
+import { testCases } from './cases/gray_rgb.case';
 
 describe('test gray from rgb', () => {
   testCases.forEach(({ gray, r, g, b }) => {

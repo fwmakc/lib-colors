@@ -1,5 +1,5 @@
 import { cmyk } from '..';
-import { testCases } from './cmyk_rgb_range.case';
+import { testCases } from './cases/cmyk_rgb_range.case';
 
 describe('test cmyk to rgb range', () => {
   testCases.forEach(({ value, expect: expected }) => {

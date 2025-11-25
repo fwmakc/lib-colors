@@ -17,7 +17,7 @@ import { rgbToString } from './helpers/rgb_to_string.helper';
 import type { IRGB } from './rgb.interface';
 
 export class RGB {
-  private color: IRGB = colorRGB;
+  private color: IRGB = { ...colorRGB };
   readonly max: IRGB = maxRGB;
 
   get r(): number {

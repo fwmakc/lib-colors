@@ -9,7 +9,7 @@ export function labToRgb(lab: ILAB): IRGB {
 }
 
 function xyzToRgb(xyz: IXYZ): IRGB {
-  const { x, y, z, alpha } = xyz;
+  const { x, y, z, alpha } = { ...xyz };
 
   const xNorm = x / 100;
   const yNorm = y / 100;

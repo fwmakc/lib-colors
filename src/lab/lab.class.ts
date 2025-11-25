@@ -11,7 +11,7 @@ import { labToString } from './helpers/lab_to_string.helper';
 import type { ILAB } from './lab.interface';
 
 export class LAB {
-  private color: ILAB = colorLAB;
+  private color: ILAB = { ...colorLAB };
   readonly max: ILAB = maxLAB;
 
   get l(): number {

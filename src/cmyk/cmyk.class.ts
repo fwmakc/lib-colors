@@ -11,7 +11,7 @@ import { cmykToRgb } from './helpers/cmyk_to_rgb.helper';
 import { cmykToString } from './helpers/cmyk_to_string.helper';
 
 export class CMYK {
-  private color: ICMYK = colorCMYK;
+  private color: ICMYK = { ...colorCMYK };
   readonly max: ICMYK = maxCMYK;
 
   get c(): number {

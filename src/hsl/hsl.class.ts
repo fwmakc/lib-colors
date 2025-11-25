@@ -9,7 +9,7 @@ import { hslToString } from './helpers/hsl_to_string.helper';
 import type { IHSL } from './hsl.interface';
 
 export class HSL {
-  private color: IHSL = colorHSL;
+  private color: IHSL = { ...colorHSL };
   readonly max: IHSL = maxHSL;
 
   get h(): number {
