@@ -1,44 +1,39 @@
-import { Color } from './color.class';
-import { fromCMYK } from './helpers/cmyk/from.cmyk.helper';
-import { fromGray } from './helpers/gray/from.gray.helper';
-import { fromHex } from './helpers/hex/from.hex.helper';
-import { fromHSL } from './helpers/hsl/from.hsl.helper';
-import { fromRGB } from './helpers/rgb/from.rgb.helper';
+import { CMYK } from './cmyk/cmyk.class';
+import type { ICMYK } from './cmyk/cmyk.interface';
+import { Gray } from './gray/gray.class';
+import type { IGray } from './gray/gray.interface';
+import { HSL } from './hsl/hsl.class';
+import type { IHSL } from './hsl/hsl.interface';
+import { RGB } from './rgb/rgb.class';
+import type { IRGB } from './rgb/rgb.interface';
 
-export { Color };
-
-export const rgb = (
-  red: number,
-  green: number,
-  blue: number,
-  alpha?: number,
-): Color => {
-  const { r, g, b, a } = fromRGB(red, green, blue, alpha);
-  return new Color(r, g, b, a);
-};
-
-export const gray = (gray: string | number): Color => {
-  const { g } = fromGray(gray);
-  return new Color(g, g, g);
-};
-
-export const hex = (hex: string): Color => {
-  const { r, g, b, a } = fromHex(hex);
-  return new Color(r, g, b, a);
-};
-
-export const hsl = (h: number, s: number, l: number, alpha?: number): Color => {
-  const { r, g, b, a } = fromHSL(h, s, l, alpha);
-  return new Color(r, g, b, a);
-};
+export { CMYK, Gray, HSL, RGB };
+export type { ICMYK, IGray, IHSL, IRGB };
 
 export const cmyk = (
   c: number,
   m: number,
   y: number,
   k: number,
-  alpha?: number,
-): Color => {
-  const { r, g, b, a } = fromCMYK(c, m, y, k, alpha);
-  return new Color(r, g, b, a);
+  a?: number,
+): CMYK => {
+  return new CMYK(c, m, y, k, a);
+};
+
+export const gray = (g: number, a?: number): Gray => {
+  return new Gray(g, a);
+};
+
+export const hex = (hex: string): RGB => {
+  const rgb = new RGB();
+  rgb.fromHex(hex);
+  return rgb;
+};
+
+export const hsl = (h: number, s: number, l: number, a?: number): HSL => {
+  return new HSL(h, s, l, a);
+};
+
+export const rgb = (r: number, g: number, b: number, a?: number): RGB => {
+  return new RGB(r, g, b, a);
 };
