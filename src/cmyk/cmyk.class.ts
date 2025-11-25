@@ -1,10 +1,12 @@
 import { alphaIsSet } from '../helpers/alpha_is_set.helper';
 import { clamp } from '../helpers/clamp.helper';
+import { LAB } from '../lab/lab.class';
 import { RGB } from '../rgb/rgb.class';
 
 import type { ICMYK } from './cmyk.interface';
 import { colorCMYK } from './consts/color.cmyk.const';
 import { maxCMYK } from './consts/max.cmyk.const';
+import { cmykToLab } from './helpers/cmyk_to_lab.helper';
 import { cmykToRgb } from './helpers/cmyk_to_rgb.helper';
 import { cmykToString } from './helpers/cmyk_to_string.helper';
 
@@ -67,6 +69,11 @@ export class CMYK {
 
   toString(): string {
     return cmykToString(this.color);
+  }
+
+  lab(): LAB {
+    const { l, a, b, alpha } = cmykToLab(this.color);
+    return new LAB(l, a, b, alpha);
   }
 
   rgb(): RGB {

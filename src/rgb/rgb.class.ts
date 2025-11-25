@@ -3,6 +3,7 @@ import { Gray } from '../gray/gray.class';
 import { alphaIsSet } from '../helpers/alpha_is_set.helper';
 import { clamp } from '../helpers/clamp.helper';
 import { HSL } from '../hsl/hsl.class';
+import { LAB } from '../lab/lab.class';
 
 import { colorRGB } from './consts/color.rgb.const';
 import { maxRGB } from './consts/max.rgb.const';
@@ -11,6 +12,7 @@ import { rgbToCmyk } from './helpers/rgb_to_cmyk.helper';
 import { rgbToGray } from './helpers/rgb_to_gray.helper';
 import { rgbToHex } from './helpers/rgb_to_hex.helper';
 import { rgbToHsl } from './helpers/rgb_to_hsl.helper';
+import { rgbToLab } from './helpers/rgb_to_lab.helper';
 import { rgbToString } from './helpers/rgb_to_string.helper';
 import type { IRGB } from './rgb.interface';
 
@@ -87,5 +89,10 @@ export class RGB {
   hsl(): HSL {
     const { h, s, l, a } = rgbToHsl(this.color);
     return new HSL(h, s, l, a);
+  }
+
+  lab(): LAB {
+    const { l, a, b, alpha } = rgbToLab(this.color);
+    return new LAB(l, a, b, alpha);
   }
 }
