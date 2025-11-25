@@ -12,20 +12,25 @@ describe('test rgb to...', () => {
     } = expected;
     const result = rgb(r, g, b, a);
 
-    it(`rgb: ${r},${g},${b},${a} -> ${result.rgb().string}`, () => {
-      expect(result.rgb().string).toBe(rgbExpect);
+    const resultString = result.toString();
+    const hexString = result.toHex();
+    const hslString = result.hsl().toString();
+    const cmykString = result.cmyk().toString();
+
+    it(`rgb: ${r},${g},${b},${a} -> ${resultString}`, () => {
+      expect(resultString).toBe(rgbExpect);
     });
 
-    it(`hex: ${r},${g},${b},${a} -> ${result.hex().string}`, () => {
-      expect(result.hex().string).toBe(hexExpect);
+    it(`hex: ${r},${g},${b},${a} -> ${hexString}`, () => {
+      expect(hexString).toBe(hexExpect);
     });
 
-    it(`hsl: ${r},${g},${b},${a} -> ${result.hsl().string}`, () => {
-      expect(result.hsl().string).toBe(hslExpect);
+    it(`hsl: ${r},${g},${b},${a} -> ${hslString}`, () => {
+      expect(hslString).toBe(hslExpect);
     });
 
-    it(`cmyk: ${r},${g},${b},${a} -> ${JSON.stringify(result.cmyk().string)}`, () => {
-      expect(result.cmyk().string).toEqual(cmykExpect);
+    it(`cmyk: ${r},${g},${b},${a} -> ${JSON.stringify(cmykString)}`, () => {
+      expect(cmykString).toEqual(cmykExpect);
     });
   });
 });

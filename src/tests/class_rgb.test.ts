@@ -1,4 +1,4 @@
-import { rgb } from '../rgb';
+import { rgb } from '..';
 import { testCases } from './rgb.case';
 
 describe('test rgb to...', () => {

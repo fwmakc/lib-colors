@@ -3,10 +3,10 @@ import { testCases } from './cmyk_rgb.case';
 
 describe('test cmyk from rgb', () => {
   testCases.forEach(({ c, m, y, k, r, g, b }) => {
-    const result = rgb(r, g, b).cmyk().string;
+    const result = rgb(r, g, b).cmyk().toString();
     const expected = `${c} ${m} ${y} ${k}`;
 
-    it(`${JSON.stringify({ r, g, b })} -> ${expected}`, () => {
+    it(`${JSON.stringify({ r, g, b })} -> ${result} = ${expected}`, () => {
       expect(result).toBe(expected);
     });
   });
